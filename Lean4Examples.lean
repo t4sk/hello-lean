@@ -4,6 +4,8 @@
 A tour of functional programming and theorem proving in Lean 4.
 Importing this module imports every topic file.
 -/
+import Lean4Examples.Hello
+/-
 import Lean4Examples.Algebra
 import Lean4Examples.Arrays
 import Lean4Examples.Basics
@@ -40,3 +42,4 @@ import Lean4Examples.Structures
 import Lean4Examples.Tactics
 import Lean4Examples.TailRecursion
 import Lean4Examples.TypeClasses
+-/
