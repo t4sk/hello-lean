@@ -25,3 +25,12 @@ def swap {α β : Type} : α × β → β × α
 
 theorem swap_swap {α β : Type} : ∀ p : α × β, swap (swap p) = p
   | (a, b) => rfl
+
+def transfer (src dst amt: Nat) : Nat × Nat := (src - amt, dst + amt)
+
+theorem transfer_preserves_total
+  (src dst amt : Nat)
+  (h : amt <= src) :
+  (transfer src dst amt).1 + (transfer src dst amt).2 = src + dst := by
+  simp [transfer]
+  omega
